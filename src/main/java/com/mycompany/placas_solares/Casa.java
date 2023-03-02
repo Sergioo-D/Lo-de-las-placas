@@ -9,16 +9,21 @@ public class Casa {
     private String nom_client;
     private int superficieTeulada;
     private boolean interruptor_casa;
-    private ArrayList<String> PlacaSolar;
-    private ArrayList<String> Aparell;
+    private ArrayList<Placas> PlacaSolar;
+    private ArrayList<Aparell_electronic> Aparell;
     
     
 
-    public Casa(String nif,String nom_client,int superficie_m2,boolean interruptor_c,int superficie){
+    public Casa(String nif,String nom_client,int superficieTeulada){
         this.nif = nif;
         this.nom_client = nom_client;
         this.superficieTeulada = superficieTeulada;
-        this.interruptor_casa = interruptor_casa;
-        
+        interruptor_casa = true;
+        PlacaSolar = new ArrayList<>();
+        Aparell = new ArrayList<>();
+    }
+    
+    public int getTeulada(){
+        return superficieTeulada;
     }
 }
